@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Card from "react-bootstrap/Card";
-
+import Button from "react-bootstrap/Button";
 
 export default class Tarjeta extends Component {
   // eslint-disable-next-line no-useless-constructor
@@ -34,7 +34,7 @@ export default class Tarjeta extends Component {
           <Card.Body className="body">
             
                 <a href={`detalleInstrumento/${this.props.id}`}>
-                  >
+                  
                   <img
                     className="imagen"
                     src={require(`../assets/images/${this.props.imagen.toLowerCase()}`)}
@@ -50,7 +50,8 @@ export default class Tarjeta extends Component {
                 {envio}
                
                   <Card.Text>{this.props.cantidadVendida} vendidos</Card.Text>
-             
+                  <Button variant="primary" href={`/detalleInstrumento/${this.props.id}`}>Detalle</Button>
+
           </Card.Body>
         </Card>
       </React.Fragment>

@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import detalleInstrumento from "./components/detalleInstrumento";
 import Map from "./components/Maps";
 import Productos from "./components/Productos"
+import Buscador from "./components/Buscador";
 class App extends Component {
   render() {
     return (
@@ -18,6 +19,8 @@ class App extends Component {
         </Route>
         <Route path="/detalleInstrumento/:id" component={detalleInstrumento}></Route>{" "}
         <Route path="/map" component={Map}></Route>
+        <Route path="/buscador/:value" component={Buscador}></Route>
+
       </Switch>
     );
   }

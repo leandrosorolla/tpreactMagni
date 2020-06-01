@@ -13,6 +13,7 @@ code {
 }
 .tarjeta {
   margin: 0 auto;
+  width: 35%;
 }
 
 .tarjetaDetalle {
