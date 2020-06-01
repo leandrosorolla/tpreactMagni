@@ -12,15 +12,10 @@ export default class Productos extends Component {
         super();
         this.state = {
             instrumentos,
-            buscado:""
         }
        
     }
-    buscador=(instrumento)=>{
-        this.setState(
-            {buscado: instrumento}
-        );
-    }
+  
     render() {
         
         const instrumentos = this.state.instrumentos.map((instrumento, i)=>{return(
@@ -34,9 +29,7 @@ export default class Productos extends Component {
                 <Navigation ></Navigation>
                 <Container fluid="md">
                     <Row>
-                        <Col>
                             {instrumentos}
-                        </Col>
                     </Row>
                     
                 </Container>

@@ -20,7 +20,6 @@ export default class Buscador extends Component {
     
     console.log(this.props.match.params.value);
     console.log(this.state.instrumentos);
-    const bus=[];
     const instrumentoEncontrado =this.state.instrumentos.filter(
       (inst,i) => {
 
@@ -44,7 +43,7 @@ export default class Buscador extends Component {
         <Container fluid="md">
             <h3>Buscando:</h3>
           <Row>
-            <Col>{instrumentos}</Col>
+            {instrumentos}
           </Row>
         </Container>
       </React.Fragment>
