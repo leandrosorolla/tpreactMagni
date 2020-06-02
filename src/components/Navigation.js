@@ -12,17 +12,23 @@ constructor(props) {
   this.state={
     value:"",
   }
-  
+  let rut="";
   this.handleChange = this.handleChange.bind(this);
   }
   handleChange(event) {   
      this.setState({value: event.target.value}); 
      console.log(this.state.value);
      
-    
+     if(this.state.value != null || this.state.value !=""){
+
+      this.rut="/buscador/"+this.state.value;
+ }else{
+   this.rut="/productos";
+ }
 }
  
   render() {
+    
  
 
     return (
@@ -35,7 +41,7 @@ constructor(props) {
           </Nav>
           <Form inline>
       <input type="text" id="search" value={this.state.value} onChange={this.handleChange} placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-primary" href={`/buscador/${this.state.value}`} >Search</Button>
+      <Button variant="outline-primary" href={this.rut} >Search</Button>
     </Form>
         </Navbar>
       </React.Fragment>

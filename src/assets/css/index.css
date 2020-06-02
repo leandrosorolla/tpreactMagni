@@ -12,8 +12,9 @@ code {
     monospace;
 }
 .tarjeta {
-  margin: 0 auto;
-  width: 35%;
+  margin: 1rem;
+  width: 15rem;
+  
 }
 
 .tarjetaDetalle {

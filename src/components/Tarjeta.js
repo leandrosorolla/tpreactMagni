@@ -36,7 +36,7 @@ export default class Tarjeta extends Component {
                 <a href={`detalleInstrumento/${this.props.id}`}>
                   
                   <img
-                    className="imagen"
+                    
                     src={require(`../assets/images/${this.props.imagen.toLowerCase()}`)}
                     aling="left"
                   />
