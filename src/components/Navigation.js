@@ -5,31 +5,22 @@ import FormControl from "react-bootstrap/FormControl";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import {instrumentos} from '../datos/instrumentos.json';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Tarjeta from "./Tarjeta";
 
 export default class Navigation extends Component {
 constructor(props) {
   super(props);
   this.state={
-    value:"",
+    instrumentos,
   }
-  let rut="";
-  this.handleChange = this.handleChange.bind(this);
   }
-  handleChange(event) {   
-     this.setState({value: event.target.value}); 
-     console.log(this.state.value);
-     
-     if(this.state.value != null || this.state.value !=""){
 
-      this.rut="/buscador/"+this.state.value;
- }else{
-   this.rut="/productos";
- }
-}
  
   render() {
-    
- 
+
+
 
     return (
       <React.Fragment>
@@ -40,10 +31,10 @@ constructor(props) {
             <Nav.Link href="/map"> Donde Estamos </Nav.Link>
           </Nav>
           <Form inline>
-      <input type="text" id="search" value={this.state.value} onChange={this.handleChange} placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-primary" href={this.rut} >Search</Button>
+     
     </Form>
         </Navbar>
+       
       </React.Fragment>
     );
   }
